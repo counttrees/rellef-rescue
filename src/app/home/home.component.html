@@ -1,5 +1,202 @@
+<div class="row">
+    <div class="col-sm-2">
 
+    </div>
+    <div class="col-sm-8 card">
+            <div class="card-header">
+                    Report a victim(s)
+                </div>
+                <div class="card-block row">
+                    <!-- <div class="col-sm-2 col-md-2 col-lg-2">
+                    </div> -->
+                   
+                    <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+        
+                            <form class="clr-form form-compact">
+                                <section class="form-block">
+                                        <dl>
+                                            <dt>
+                                                Victim Details
+                                            </dt>
+                                            <dd>
+                                                    <div class="form-group">
+                                                        <label for="name">Victim Name</label>
+                                                        <input type="text" name="name" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="contact">Contact No</label>
+                                                        <input type="text" name="contact" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="contact">Alternate No</label>
+                                                        <input type="text" name="contact" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="name">Victim Photo</label>
+                                                        <input type="text" name="name" [(ngModel)]="value">
+                                                    </div>
+                                            </dd>
+                                            </dl>
 
-<p>Om</p>
+                                            <input type="checkbox" [checked]="self" (change)="self = !self" />I am the vicim.
+                                            <dl *ngIf="!self">
+                                                <dt>
+                                                    <label>Reporting Person</label>
+                                                </dt>
+                                                <dd>
+                                                    <div class="form-group">
+                                                            <label for="contact">Name</label>
+                                                        <input type="text" name="contact" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label for="contact">Contact No.</label>
+                                                        <input type="text" name="contact" [(ngModel)]="value">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>
+                                                    <div>Location Details</div>
+                                                </dt>
+                                                <dd>
 
+                                                        <div class="form-group">
+                                                            <label for="name">Surroundings Photo</label>
+                                                            <input type="text" name="name" [(ngModel)]="value">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="location">Co-ordinates</label>
+                                                            <div>Google Map</div>
+                                                        </div>
+                                                        
+                                                        <input type="checkbox" [checked]="manLoc" (change)="manLoc = !manLoc" />Manual Location.
+
+                                                        <div *ngIf="manLoc">
+
+                                                                <div class="form-group">
+                                                                    <label for="location">Street Address</label>
+                                                                    <input type="text" name="location" [(ngModel)]="value">
+                                                                </div>
+                                                    
+                                                                <div class="form-group">
+                                                                    <label for="location">Village/City</label>
+                                                                    <input type="text" name="location" [(ngModel)]="value">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="location">District</label>
+                                                                    <input type="text" name="location" [(ngModel)]="value">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="location">State</label>
+                                                                    <input type="text" name="location" [(ngModel)]="value">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="location">Pin Code</label>
+                                                                    <input type="text" name="location" [(ngModel)]="value">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="location">Land Mark</label>
+                                                                    <input type="text" name="location" [(ngModel)]="value">
+                                                                </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label for="name">Last seen</label>
+                                                            <input type="text" name="name" [(ngModel)]="value">
+                                                        </div>
+                    
+                                            </dd>
+                                        </dl>
+                                            
+                                          
+                                            <dl>
+                                                <dt>
+                                                    <label for="other">No of Persons with you</label>
+                                                </dt>
+                                                <dd>
+                                                    
+                                                    <div class="form-group">
+                                                
+                                                        <label for="livestock">Livestock</label>
+                                                        <input type="number" name="livestock" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="livestock">Children</label>
+                                                        <input type="number" name="livestock" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="livestock">Women</label>
+                                                        <input type="number" name="livestock" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="livestock">Elderly</label>
+                                                        <input type="number" name="livestock" [(ngModel)]="value">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="livestock">Adults</label>
+                                                        <input type="number" name="livestock" [(ngModel)]="value">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>
+                                                    Assistance Needed
+                                                </dt>
+                                                <dd>
+                                                    <div class="form-group">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" [checked]="rescue" 
+                                                                    id="rescue" (click)="rescue = !rescue">
+                                                                    <label for="rescue">Rescue</label>
+                                                                </div>
+                                                                
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" [checked]="water" id="water" 
+                                                                    (click)="water = !water">
+                                                                    <label for ="water">Water</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" [checked]="food" id="food" 
+                                                                    (click)="food = !food">
+                                                                    <label for ="food">Food</label>
+                                                                </div>
+                                                                
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" [checked]="clothing" id="clothing" 
+                                                                    (click)="clothing = !clothing">
+                                                                    <label for ="clothing">Clothing</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" [checked]="medical" id="medical" 
+                                                                    (click)="medical = !medical">
+                                                                    <label for ="medical">Medical</label>
+                                                                </div>
+                                                    </div>
+                                                        
+                                                    <div class="form-group">
+                                                        <label for ="medical">Others</label>
+                                                        <input type="text" [(ngModel)]="medical" id="medical">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            
+                                
+                                </section>      
+                                <section class="form-footer">
+                                    <button class="btn btn-primary" (click)="toSubmit()">Submit</button>
+                                </section>
+                            </form>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+                        <div style="height:130px;width:100px;border:1px solid black;">A</div>
+                    </div>
+                    
+                </div>
+        
+    </div>
+    <div class="col-sm-2">
+    </div>
+    
+       
+</div>
 
